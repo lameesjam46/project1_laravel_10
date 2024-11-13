@@ -14,7 +14,7 @@ class AuthController extends Controller
    {
        $request->validate([
            'name'=>['required'],
-           'mobile'=>['required','unique:users,mobile'],
+           'mobile'=>['required','digits:10','unique:users,mobile'],
            'password'=>['required']
        ]);
 
